@@ -1,0 +1,153 @@
+[
+  {
+    "id": 1,
+    "page_name": "About Me",
+    "blurb_start": "Hi. I'm Jason Conover,\nFront End Developer\n&",
+    "adjectives": [
+      "Los Angeleno.",
+      "crazy cat person.",
+      "fitness enthusiast.",
+      "house music junkie."
+    ],
+    "cta_more": "A little more about me",
+    "summary": "I got my start in a small marketing department with big needs, so I learned everything from print and video production to Flash animation. I fell in love with web development and haven't looked back!\nSince then I've had the opportunity to work in a wide variety of industries and business types—high tech, B2B, B2C, agency, corporate—you name it. Along the way I went back to college for a BA in Marketing just for good measure.\nCurrently I'm contracting as a UI Web Developer at T-Mobile. This position's taught me a lot about enterprise-level e-commerce, maintaining .NET and JAVA environments, and coordinating efforts with offshore developers.",
+    "cta_back": "Back",
+    "cta_mywork": "See my work"
+  },
+  {
+    "id": 2,
+    "page_name": "My Work",
+    "projects": [{
+      "name": "T-Mobile",
+      "className": "tmobile",
+      "imgURL": "img/tmobile_graphic.png",
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "jQuery",
+        "Responsive",
+        "Bootstrap",
+        "JIRA",
+        "Scrum",
+        "Visual Studio",
+        "Eclipse",
+        "CMS: Adobe Experience Manager (AEM)",
+        "Code Repository: AccuRev",
+        "Analytics: IBM Coremetrics"
+      ],
+      "description": "<p>Describing T-Mobile as \u2018fast-paced\u2019 is an understatement. This company rolls-out new products and initiatives at breakneck speeds! The good news\u2026 there\u2019s never a dull moment!<\/p>\r\n<h5>Front End Development<\/h5>\r\n<p>Clean markup organizes content, CSS provides the presentation layer and enables responsive design, and JavaScript rounds it out, adding behavior to the mix. Developer toolbars such as Firebug help diagnose bugs, Visual Studio and Eclipse maintain .NET & JAVA solutions, and JIRA and daily Scrum calls keep projects organized.<\/p>"
+    },
+    {
+      "name": "What\"s New",
+      "className": "whats_new",
+      "imgURL": "img/whats_new_graphic.png",
+      "technologies": [
+        "AngularJS",
+        "LESS",
+        "Bootstrap",
+        "Grunt",
+        "Bower",
+        "npm",
+        "Dev Server: Node.js",
+        "Code Repository: Git",
+        "IDE: Brackets",
+        "Adobe Creative Cloud"
+      ],
+      "description": "<p>I\u2019ve been hard at work, learning new technologies and brushing-up on existing ones. And they\u2019re all incorporated into this site!<\/p>\r\n<h5>AngularJS<\/h5>\r\n<p>I wanted to learn Angular but Codecademy tutorials only take you so far. So I built this site! Controllers, views, routing, directives\u2014they\u2019re all here.<\/p>\r\n<h5>GitHub<\/h5>\r\n<p>And speaking of Angular directives, <a href=\"https:\/\/github.com\/elaboratecon\/directives\" target=\"_blank\">check out a few of mine on GitHub!<\/a><\/p>\r\n<h5>LESS<\/h5>\r\n<p>Visually-formatted CSS without all the redundancy. What\"s not to love?<\/p>\r\n<h5>Bootstrap<\/h5>\r\n<p>Bootstrap is a great way to get up and running quickly, speeding-up the mundane and allowing for quick prototyping.<\/p>\r\n<h5>Grunt<\/h5>\r\n<p>Nothing makes you feel like a hacker like running a Grunt build from the command line!<\/p>"
+    },
+    {
+      "name": "WordPress",
+      "className": "wordpress",
+      "imgURL": "img/marcusremixed_graphic.png",
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "jQuery",
+        "PHP",
+        "Photoshop",
+        "Illustrator",
+        "IDE: Brackets",
+        "DB: MySQL",
+        "Dev Server: MAMP",
+        "CMS: Wordpress"
+      ],
+      "description": "<p>When it comes to skinning a WordPress site, there\"s no need to reinvent the wheel\u2014there are already thousands of free and low-cost themes to choose from. You can then further modify a theme to perfectly fit your needs.<\/p>\r\n<h5>Making it yours<\/h5>\r\n<p>Overwriting styles in a separate child stylesheet ensures that\u2014even if they update the theme\u2014your look and layout will be preserved.<\/p>\r\n<p>You can also leverage the rich developer network to modify PHP functions and source plugins, which makes implementing features like Google Analytics a snap!<\/p>\r\n<h5>Responsive Design<\/h5>\r\n<p>While out-of-the-box responsive layouts are great, it\"s always a good idea to test them thoroughly and modify\/add additional breakpoints if necessary.<\/p>\r\n<p>This is my seventh WordPress project and I\"m sure there will be many more to come!<\/p>\r\n<button type=\"button\" class=\"btn btn-primary btn-sm\" onclick=\"window.open(\"http:\/\/www.marcusremixed.com\", \"_blank\")\">Check out MarcusRemixed.com<\/button>"
+    },
+    {
+      "name": "Varolii",
+      "className": "varolii",
+      "imgURL": "img/varolii_emails.png",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Flash",
+        "HTML Email Development",
+        "IDE: Visual Studio",
+        "CMS: Sitecore",
+        "Code Repository: Team Foundation Server (TFS)",
+        "Google Analytics"
+        ],
+      "description": "<p>This Seattle-based <em>Software as a Service (SaaS)<\/em> provider (now Nuance Communications) relied heavily on the internet for marketing and lead generation.<\/p>\r\n<h5>Search Engine Optimization<\/h5>\r\n<p>Varolii was all about SEO. And that meant overhauling the CMS templates to output content in a meaningful hierarchy, using proper markup.<\/p>\r\n<p>Now you\"re giving search engines more than just data\u2014you\"re providing them with context as well!<\/p>"
+    },
+    {
+      "name": "Wyndham Worldwide",
+      "className": "wyndham",
+      "imgURL": "img/wyndham_graphic.png",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Flash",
+        "Photoshop",
+        "HTML Email Development",
+        "IDE: Dreamweaver",
+        "CMS: Documentum",
+        "Code Repository: Tortoise CVS",
+        "Analytics: Omniture"
+      ],
+      "description": "<p>Marketing dream vacations was fun\u2014but it wasn\"t without its challenges.<\/p>\r\n<h5>SEO: Letting the content speak for itself<\/h5>\r\n<p>By eliminating presentational artifacts from the markup\u2014such as tables and layout graphics\u2014you\"re left with pure content. Now organize that content in a meaningful hierarchy and you can let the content speak for itself. True search engine optimization!<\/p>\r\n<p>Better rankings in search results means more visibility. And more visibility means more business!<\/p>\r\n<h5>Web Analytics<\/h5>\r\n<p>JavaScript-based analytics really changed the game. I helped implement Omniture (now <em>Adobe Analytics<\/em>) that resulted in actionable data that helped us improve customer conversion rates and increase sales.<\/p>"
+    },
+    {
+      "name": "Freelance",
+      "className": "freelance",
+      "imgURL": "img/freelance_email.png",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "Flash",
+        "Photoshop",
+        "HTML Email Development",
+        "IDE: Dreamweaver"
+        ],
+      "description": "<p>I\"ve had the incredible opportunity to work on a number of exciting Microsoft campaigns during my time in Seattle.<\/p>\r\n<h5>HTML Email Development<\/h5>\r\n<p>\r\n<strong>Microsoft Business Solutions<\/strong><br \/>\r\nWhen it came to B2B marketing, Microsoft was a stickler for backwards-compatibility. This project for DDB Direct had me hand-coding old-school HTML tables and ditching the CSS. The resulting email rendered perfectly across all platforms and devices.\r\n<\/p>\r\n<h5>Banner Ads<\/h5>\r\n<p>\r\n<strong>Windows Home Server<\/strong><br \/>\r\nThe good folks at Creature Seattle were asked to come up with a creative way of marketing Microsoft\"s \"Stay-at-Home Server\" products. So to warm the public up to the idea, they created a children\"s book entitled \"<em>Mommy, Why is There a Server in the House?<\/em>\" I was brought in to turn static comps into animated banners.\r\n<\/p>\r\n<h5>UX Design<\/h5>\r\n<p>\r\n<strong>Microsoft Hardware Sweepstakes<\/strong><br \/>\r\nThe Garrigan Lyman Group (GLG) had me creating assets for a sweepstakes campaign where users could enroll to win Microsoft hardware, such as ergonomic keyboards and HD webcams.\r\n<\/p>"
+    }]
+  },
+  {
+    "id": 3,
+    "page_name": "Contact Me",
+    "headline": "Let's Connect!",
+    "links": [{
+      "label": "LinkedIn",
+      "link": {
+        "copy": "Connect with me on LinkedIn",
+        "url": "https://www.linkedin.com/in/jasonconover"
+      }
+    },
+    {
+      "label": "Email",
+      "link": {
+        "copy": "Shoot me an email",
+        "url": "maito:JasonConover@outlook.com"
+      }
+    },
+    {
+      "label": "GitHub",
+      "link": {
+        "copy": "Check out my GitHub account",
+        "url": "https://github.com/elaboratecon/"
+      }
+    }]
+  }
+]

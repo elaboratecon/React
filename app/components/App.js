@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 // Import custom components
 import Nav from './Nav'
-import AboutMe from './AboutMe'
-import MyWork from './MyWork'
+import { AboutMe } from './AboutMe'
+import { MyWork } from './MyWork'
 import Contact from './Contact'
 
 class App extends React.Component {

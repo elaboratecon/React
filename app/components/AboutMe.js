@@ -1,14 +1,76 @@
+// Import React components
 import React from 'react'
 
-class AboutMe extends React.Component {
+// Import custom components
+import api from '../utils/api'
+import { Button } from './Button'
+import { Adjectives } from './Adjectives'
+
+let adjIndex = 0
+
+export class AboutMe extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      currentPage: 1,
+      adjIndex: 0
+    }
+  }
+
+  populatePageContent () {
+    // Request Page Data: About Me
+    api.fetchPageData(0)
+      .then(function (pageData) {
+        this.setState({
+          page_name: pageData.page_name,
+          blurb_start: pageData.blurb_start,
+          adjectives: pageData.adjectives,
+          cta_more: pageData.cta_more,
+          cta_back: pageData.cta_back,
+          cta_mywork: pageData.cta_mywork,
+          summary: pageData.summary,
+          curr_adj: pageData.adjectives[adjIndex]
+        })
+      }.bind(this))
+  }
+
+  nextAdj () {
+    let next = adjIndex + 1
+    if (next === this.state.adjectives.length) {
+      next = 0
+    }
+    adjIndex = next
+    this.setState({
+      curr_adj: this.state.adjectives[adjIndex]
+    })
+  }
+
+  // Event Handlers
+  more () {
+    console.log('MORE!')
+  }
+
+  componentDidMount () {
+    this.populatePageContent()
+
+    this.interval = setInterval(function () {
+      this.nextAdj()
+    }.bind(this), 3000)
+  }
+
+  componentWillUnmount (prevProps, prevState) {
+    clearInterval(this.interval)
+  }
+
   render () {
     return (
       <div className='home-container'>
-        <h1>About Me</h1>
-        <h2>This is an h2 tag</h2>
+        <h2>
+          {this.state.blurb_start}
+          <Adjectives curr_adj={this.state.curr_adj} />
+        </h2>
+        <Button copy={this.state.cta_more} onclick={this.more} />
       </div>
     )
   }
 }
-
-export default AboutMe
