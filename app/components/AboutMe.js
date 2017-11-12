@@ -12,8 +12,7 @@ export class AboutMe extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      currentPage: 1,
-      adjIndex: 0
+      currentPage: 1
     }
   }
 
@@ -49,6 +48,9 @@ export class AboutMe extends React.Component {
   more () {
     console.log('MORE!')
   }
+  back () {
+    console.log('BACK!')
+  }
 
   componentDidMount () {
     this.populatePageContent()
@@ -65,11 +67,20 @@ export class AboutMe extends React.Component {
   render () {
     return (
       <div className='home-container'>
-        <h2>
-          {this.state.blurb_start}
-          <Adjectives curr_adj={this.state.curr_adj} />
-        </h2>
-        <Button copy={this.state.cta_more} onclick={this.more} />
+        <div className='left'>
+          <h2>
+            {this.state.blurb_start}&nbsp;
+            <Adjectives curr_adj={this.state.curr_adj} />
+          </h2>
+          <Button copy={this.state.cta_more} onclick={this.more} />
+        </div>
+        <div className='right'>
+          <div className='summary'>
+            {this.state.summary}
+            <Button copy={this.state.cta_back} onclick={this.back} />
+            <Button copy={this.state.cta_mywork} onclick='/MyWork' type='url' />
+          </div>
+        </div>
       </div>
     )
   }
