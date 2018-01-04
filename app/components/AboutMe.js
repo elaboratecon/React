@@ -67,6 +67,7 @@ export class AboutMe extends React.Component {
   render () {
     return (
       <div className='home-container'>
+        <h1>About Me</h1>
         <div className='left'>
           <h2>
             {this.state.blurb_start}&nbsp;

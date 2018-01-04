@@ -17,6 +17,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.16.2",
+    "history": "^4.7.2",
     "prop-types": "^15.5.10",
     "query-string": "^5.0.0",
     "react": "^16.0.0",
