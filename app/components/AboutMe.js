@@ -2,85 +2,44 @@
 import React from 'react'
 
 // Import custom components
-import api from '../utils/api'
-import { Button } from './Button'
-import { Adjectives } from './Adjectives'
+import { AboutMeLeft } from './AboutMeLeft'
+import { AboutMeRight } from './AboutMeRight'
 
-let adjIndex = 0
+const menu = document.querySelector('.menu')
 
 export class AboutMe extends React.Component {
   constructor (props) {
     super(props)
+
     this.state = {
-      currentPage: 1
+      more: false
     }
-  }
 
-  populatePageContent () {
-    // Request Page Data: About Me
-    api.fetchPageData(0)
-      .then(function (pageData) {
-        this.setState({
-          page_name: pageData.page_name,
-          blurb_start: pageData.blurb_start,
-          adjectives: pageData.adjectives,
-          cta_more: pageData.cta_more,
-          cta_back: pageData.cta_back,
-          cta_mywork: pageData.cta_mywork,
-          summary: pageData.summary,
-          curr_adj: pageData.adjectives[adjIndex]
-        })
-      }.bind(this))
-  }
-
-  nextAdj () {
-    let next = adjIndex + 1
-    if (next === this.state.adjectives.length) {
-      next = 0
-    }
-    adjIndex = next
-    this.setState({
-      curr_adj: this.state.adjectives[adjIndex]
-    })
+    this.handleMore = this.handleMore.bind(this)
+    this.handleBack = this.handleBack.bind(this)
   }
 
   // Event Handlers
-  more () {
+  handleMore () {
     console.log('MORE!')
+    this.setState({
+      more: true
+    })
   }
-  back () {
+
+  handleBack () {
     console.log('BACK!')
-  }
-
-  componentDidMount () {
-    this.populatePageContent()
-
-    this.interval = setInterval(function () {
-      this.nextAdj()
-    }.bind(this), 3000)
-  }
-
-  componentWillUnmount (prevProps, prevState) {
-    clearInterval(this.interval)
+    this.setState({
+      more: false
+    })
   }
 
   render () {
     return (
-      <div className='home-container'>
-        <h1>About Me</h1>
-        <div className='left'>
-          <h2>
-            {this.state.blurb_start}&nbsp;
-            <Adjectives curr_adj={this.state.curr_adj} />
-          </h2>
-          <Button copy={this.state.cta_more} onclick={this.more} />
-        </div>
-        <div className='right'>
-          <div className='summary'>
-            {this.state.summary}
-            <Button copy={this.state.cta_back} onclick={this.back} />
-            <Button copy={this.state.cta_mywork} onclick='/MyWork' type='url' />
-          </div>
+      <div className='page-container'>
+        <div className={'page-aboutme grid-container ' + (this.state.more ? 'more' : '')}>
+          <AboutMeLeft onClick={this.handleMore} />
+          <AboutMeRight onClick={this.handleBack} />
         </div>
       </div>
     )

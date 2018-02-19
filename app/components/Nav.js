@@ -17,20 +17,21 @@ class Nav extends React.Component {
 
   render () {
     return (
-      <nav role='navigation'>
-        <div className='menuToggle'>
+      <nav role='navigation' className='navbar'>
+        <div className='menu-wrapper'>
           <input
+            className='menu-toggle'
             type='checkbox'
             id='navCheck'
             checked={ this.state.isChecked }
             onChange={ this.handleChecked } />
-          <span></span>
-          <span></span>
-          <span></span>
+          <span className='menu-toggle--tick'></span>
+          <span className='menu-toggle--tick'></span>
+          <span className='menu-toggle--tick'></span>
           <ul className='menu'>
-            <li><Link to='/'>About Me</Link></li>
-            <li><Link to='/MyWork'>My Work</Link></li>
-            <li><Link to='/Contact'>Contact Me</Link></li>
+            <li className='menu__item menu__item--active'><Link to='/'>About Me</Link></li>
+            <li className='menu__item'><Link to='/MyWork'>My Work</Link></li>
+            <li className='menu__item'><Link to='/Contact'>Contact Me</Link></li>
           </ul>
         </div>
       </nav>
