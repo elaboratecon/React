@@ -2,8 +2,8 @@
 import React from 'react'
 
 // Import custom components
-import { AboutMeLeft } from './AboutMeLeft'
-import { AboutMeRight } from './AboutMeRight'
+import { AboutMeSplash } from './AboutMeSplash'
+import { AboutMeMore } from './AboutMeMore'
 
 const menu = document.querySelector('.menu')
 
@@ -36,11 +36,9 @@ export class AboutMe extends React.Component {
 
   render () {
     return (
-      <div className='page-container'>
-        <div className={'page-aboutme grid-container ' + (this.state.more ? 'more' : '')}>
-          <AboutMeLeft onClick={this.handleMore} />
-          <AboutMeRight onClick={this.handleBack} />
-        </div>
+      <div className={'l-page aboutme-container' + (this.state.more ? ' aboutme--slide-right' : '')}>
+        <AboutMeSplash onClick={this.handleMore} />
+        <AboutMeMore onClick={this.handleBack} />
       </div>
     )
   }
