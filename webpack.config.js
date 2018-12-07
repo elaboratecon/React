@@ -2,12 +2,12 @@ var path = require('path')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-module.exports = {
+const config = {
   entry: './app/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'index_bundle.js',
-    publicPath: '/'
+    filename: 'index_bundle.js'
+    // publicPath: '/'
   },
   module: {
     rules: [
@@ -19,9 +19,22 @@ module.exports = {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: ['css-loader', 'sass-loader'],
-          publicPath: '/dist'
+          use: ['css-loader', 'sass-loader']
+          // publicPath: '/dist/'
         })
+      },
+      {
+        test: /\.(jpe?g|png|jpg|gif|svg)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'img/',
+              publicPath: 'img/'
+            }
+          }
+        ]
       }
     ]
   },
@@ -39,3 +52,5 @@ module.exports = {
     })
   ]
 }
+
+module.exports = config

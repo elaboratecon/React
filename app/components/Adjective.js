@@ -11,18 +11,16 @@ export class Adjective extends React.Component {
 
   nextAdj () {
     let next = this.state.adjIndex + 1
-    if (next === this.props.array.length) {
-      next = 0
-    }
+    if (next === this.props.array.length) next = 0
     this.setState({
       adjIndex: next
     })
   }
 
   componentDidMount () {
-    this.interval = setInterval(function () {
+    this.interval = setInterval(() => {
       this.nextAdj()
-    }.bind(this), 3000)
+    }, 3000)
   }
 
   componentWillUnmount () {
@@ -31,7 +29,7 @@ export class Adjective extends React.Component {
 
   render () {
     return (
-      <span>{this.props.array[this.state.adjIndex]}</span>
+      <span className="c-splash-adjective">{this.props.array[this.state.adjIndex]}</span>
     )
   }
 }
