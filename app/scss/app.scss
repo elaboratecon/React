@@ -72,12 +72,6 @@ $just-another-hand: 'Just Another Hand', cursive;
 }
 
 // Media Query Mixins
-@mixin tablet-and-desktop {
-  @media (min-width: $tablet-width) {
-    @content;
-  }
-}
-
 @mixin tablet {
   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
     @content;
@@ -86,6 +80,12 @@ $just-another-hand: 'Just Another Hand', cursive;
 
 @mixin desktop {
   @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin tablet-and-desktop {
+  @media (min-width: $tablet-width) {
     @content;
   }
 }
@@ -284,6 +284,7 @@ p {
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
   height:calc(100% - 25px);
   overflow-y: scroll;
+
   @include tablet-and-desktop {
     position: relative;
     transform: none;
@@ -347,6 +348,7 @@ p {
 .l-page-container {
   overflow-x: hidden;
   height: calc(100% - #{$header-height-min});
+  text-align: center;
   @include tablet-and-desktop {
     height: calc(100% - #{$header-height-max});
   }
@@ -429,7 +431,6 @@ p {
 
     &-summary {
       border: 1px dotted blue;
-      //width: 60%;
       margin: 70px 7% 0 35%;
       @include wider-than(600px) {
         width: 40%;
@@ -445,6 +446,115 @@ p {
   }
 }
 
+// My Work
+.mywork {
+
+  &-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: calc(100vh - #{$header-height-min});
+
+    @include tablet-and-desktop {
+      height: calc(100vh - #{$header-height-max});
+    }
+
+    .project-wrapper {
+      // display: none;
+      background: linear-gradient(to bottom,#f7f7f7 0,#e0e0e0 100%);
+      margin: 0;
+      padding: 3% 2.5%;
+    }
+
+    nav {
+      height: 100%;
+
+      .tiles {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-content: start;
+        margin: 0 auto;
+        width: 100%;
+        background: #e0e0e0;
+        box-shadow: 0px 0px 30px 2px rgba(0,0,0,0.25);
+        height: 100%;
+          
+        @include tablet {
+          grid-template-columns: repeat(2, 1fr);
+        }
+  
+        @include desktop {
+          grid-template-columns: repeat(3, 1fr);
+        }
+  
+        .tile {
+          padding-bottom: 74.8%;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: 60%;
+  
+          &--nasa {
+            background-image: url('../assets/img/tile_bg_nasa.png');
+            background-color: white;
+            background-size: 50%;
+          }
+    
+          &--adobe {
+            background-image: url('../assets/img/tile_bg_adobe.png');
+            background-color: #ee1715;
+            background-size: 28%;
+          }
+    
+          &--grindr {
+            background-image: url('../assets/img/tile_bg_grindr.png');
+            background-color: #fcb702;
+            background-size: 38%;
+          }
+    
+          &--tmobile {
+            background-image: url('../assets/img/tile_bg_tmobile.png');
+            background-color: #e30C74;
+            background-size: 65%;
+          }
+  
+          &--reactjs {
+            background-image: url('../assets/img/tile_bg_reactjs.png');
+            background-color: #38d7fe;
+            // background-size: 30%;
+          }
+  
+          &--angularjs {
+            background-image: url('../assets/img/tile_bg_angularjs.png');
+            background-color: #b72d2d;
+            background-size: 70%;
+          }
+  
+          &--wordpress {
+            background-image: url('../assets/img/tile_bg_wordpress.png');
+            background-color: #e17a00;
+            background-size: 56%;
+          }
+  
+          &--wyndham {
+            background-image: url('../assets/img/tile_bg_wyndham.png');
+            background-color: #0177bf;
+            background-size: 68%;
+          }
+  
+          &--microsoft {
+            background-image: url('../assets/img/tile_bg_microsoft.png');
+            background-color: #360054;
+            background-size: 60%;
+          }
+          
+          a {
+            @include hidden;
+          }
+        }
+      }
+    }
+  }
+}
 
 // Components
 .c-splash-adjective {
@@ -458,8 +568,7 @@ p {
   padding: 0 500%;
   text-align: center;
   height: $footer-height;
-  padding-top: 20px;
-  box-sizing: border-box;
+  padding: 20px 0 10px 0;
   font-size: .875em;
   line-height: 1.6em;
 }
