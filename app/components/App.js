@@ -18,7 +18,7 @@ import logo from '../assets/svg/logo.svg'
 
 import AppContainer from './AppContainer'
 
-function App() {
+function App () {
   const [ isChecked, setIsChecked ] = useState('')
 
   const contextValue = {

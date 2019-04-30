@@ -8,14 +8,13 @@ import { Context } from './Context'
 function AppContainer (props) {
   const { isChecked, setIsChecked } = useContext(Context)
 
-  useEffect(
+  useEffect (
     () => {
       const unlisten = props.history.listen((location, action) => {
         setIsChecked('')
-        console.log({action})
       });
       return () => {
-        unlisten();
+        unlisten()
       };
     },
     []
